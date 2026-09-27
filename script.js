@@ -5,7 +5,7 @@ if (yearEl) {
 }
 
 // Tipp-Animation für die "whoami"-Antwort im Terminal
-const outputText = 'Simon — Schüler, baut eigene Sprachen, Netze und Spiele.';
+const outputText = 'VTflux — Schüler, baut eigene Sprachen, Netze und Spiele.';
 const outputEl = document.getElementById('typed-output');
 
 function typeOutput() {
