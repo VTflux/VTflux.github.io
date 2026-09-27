@@ -1,11 +1,143 @@
 ﻿<!DOCTYPE html>
-
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<html lang="de">
 <head>
-    <meta charset="utf-8" />
-    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simon — VTL-Labs</title>
+    <meta name="description" content="Simon baut eigene Programmiersprachen, Spiele und Software-Projekte.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <p>My git page</p>
+
+    <header class="site-header">
+        <nav class="nav">
+            <a href="#top" class="nav__brand">simon<span class="nav__at">@</span>vtl-labs</a>
+            <ul class="nav__links">
+                <li><a href="#about">Über mich</a></li>
+                <li><a href="#projects">Projekte</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="top" class="hero">
+            <div class="terminal">
+                <div class="terminal__bar">
+                    <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                    <span class="terminal__path">~/simon</span>
+                </div>
+                <div class="terminal__body">
+                    <p class="line">
+                        <span class="prompt">simon@vtl-labs</span><span class="colon">:</span><span class="path">~</span><span class="dollar">$</span> whoami
+                    </p>
+                    <p class="line output" id="typed-output"></p>
+                    <p class="line">
+                        <span class="prompt">simon@vtl-labs</span><span class="colon">:</span><span class="path">~</span><span class="dollar">$</span>
+                        <span class="cursor" aria-hidden="true"></span>
+                    </p>
+                </div>
+            </div>
+            <p class="hero__caption">Schüler aus Chemnitz. Baut Sprachen, Netze und Spiele, weil Erklärungen erst zählen, wenn Code läuft.</p>
+        </section>
+
+        <section id="about" class="about">
+            <h2 class="section-label">~/ueber-mich</h2>
+            <div class="about__grid">
+                <div class="about__text">
+                    <p>Ich bin Simon, Schüler und seit über einem Jahr in der Softwareentwicklung unterwegs. Am liebsten verstehe ich Dinge, indem ich sie von Grund auf selbst baue — deshalb schreibe ich zum Beispiel gerade an einer eigenen Programmiersprache, statt nur eine zu benutzen.</p>
+                    <p>Meine Projekte laufen unter der Organisation <a href="https://github.com/VTL-Labs" target="_blank" rel="noopener">VTL-Labs</a> auf GitHub. Wenn ich mal nicht code, animiere ich in Blender.</p>
+                </div>
+                <div class="about__tools">
+                    <h3>Werkzeuge</h3>
+                    <ul class="tool-list">
+                        <li>VS Code</li>
+                        <li>GitHub Desktop</li>
+                        <li>Unity 6</li>
+                        <li>Windows</li>
+                        <li>Python</li>
+                        <li>Blender</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects">
+            <h2 class="section-label">~/projekte</h2>
+            <ul class="tree" role="list">
+
+                <li class="tree__item">
+                    <div class="tree__row">
+                        <span class="tree__branch">├──</span>
+                        <span class="tree__name">simlang<span class="tree__slash">/</span></span>
+                        <span class="tree__tag">Sprache</span>
+                    </div>
+                    <p class="tree__desc">Eigene Programmiersprache (Kürzel SL, Dateiendung .sl) — bewusst ohne OOP. Erkennt und startet .sl-Dateien automatisch. Eine objektorientierte Schwestersprache (OSL) ist geplant.</p>
+                    <a class="tree__link" href="#" target="_blank" rel="noopener">github.com/VTL-Labs/SimLang</a>
+                </li>
+
+                <li class="tree__item">
+                    <div class="tree__row">
+                        <span class="tree__branch">├──</span>
+                        <span class="tree__name">wpf-calculator<span class="tree__slash">/</span></span>
+                        <span class="tree__tag">Windows-App</span>
+                    </div>
+                    <p class="tree__desc">Meine erste veröffentlichte Windows-Anwendung. Die Rechenengine wird nach und nach durch SimLang ersetzt.</p>
+                    <a class="tree__link" href="#" target="_blank" rel="noopener">github.com/VTL-Labs/WpfCalculator</a>
+                </li>
+
+                <li class="tree__item">
+                    <div class="tree__row">
+                        <span class="tree__branch">├──</span>
+                        <span class="tree__name">path-between-gods<span class="tree__slash">/</span></span>
+                        <span class="tree__tag">Unity</span>
+                    </div>
+                    <p class="tree__desc">Spielprojekt in Unity, als Monorepo aufgebaut — das Unity-Projekt liegt als eigener Unterordner im Repository statt im Root.</p>
+                    <a class="tree__link" href="#" target="_blank" rel="noopener">github.com/VTL-Labs/path-between-gods</a>
+                </li>
+
+                <li class="tree__item">
+                    <div class="tree__row">
+                        <span class="tree__branch">├──</span>
+                        <span class="tree__name">neuronales-netzwerk<span class="tree__slash">/</span></span>
+                        <span class="tree__tag">Python</span>
+                    </div>
+                    <p class="tree__desc">Ein neuronales Netz komplett selbst in Python geschrieben, ohne Frameworks wie TensorFlow. Ziel: die logische XOR-Funktion lernen.</p>
+                    <a class="tree__link" href="#" target="_blank" rel="noopener">github.com/VTL-Labs/neuronales-netzwerk</a>
+                </li>
+
+                <li class="tree__item">
+                    <div class="tree__row">
+                        <span class="tree__branch">└──</span>
+                        <span class="tree__name">stimmungsmessung<span class="tree__slash">/</span></span>
+                        <span class="tree__tag">Schulprojekt</span>
+                    </div>
+                    <p class="tree__desc">Digitale Stimmungsmessung für den Geschichtsunterricht: HTML/CSS/JS-Frontend, Flask-Backend und ein Raspberry Pi 4 als lokaler Server ohne Internetanbindung.</p>
+                    <a class="tree__link" href="#" target="_blank" rel="noopener">github.com/VTL-Labs/stimmungsmessung</a>
+                </li>
+
+            </ul>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2 class="section-label">~/kontakt</h2>
+            <p>Fragen oder Ideen zu einem der Projekte? Schreib mir.</p>
+            <ul class="contact__links">
+                <li><a href="mailto:deine-email@beispiel.de">deine-email@beispiel.de</a></li>
+                <li><a href="https://github.com/VTL-Labs" target="_blank" rel="noopener">GitHub — VTL-Labs</a></li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; <span id="year"></span> Simon · VTL-Labs</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
